@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - image: frontend
-        name: gcr.io/gcp-repo/test-image:latest
+        name: gcr.io/gcp-repo/test-gcpdevops:latest
         ports:
         - containerPort: 80
         env:
