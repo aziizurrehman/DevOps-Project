@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - image: frontend
-        name: gcr.io/massive-boulder-389916/gcpdevops@sha256:32f95c113094510dddfedb09153a101ecc589c5beeb57736ba544b49a8a71245
+        name: gcr.io/gcp-repo/test-gcpdevops:latest
         ports:
         - containerPort: 80
         env:
