@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: frontend
   name: frontend
@@ -13,13 +12,12 @@ spec:
   strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: frontend
     spec:
       containers:
       - image: frontend
-        name: "gcr.io/gcp-repo/test-image:latest"
+        name: gcr.io/gcp-repo/test-image:latest
         ports:
         - containerPort: 80
         env:
