@@ -6,12 +6,10 @@ steps:
 - name: "gcr.io/cloud-builders/docker"
   args: ["push","gcr.io/$PROJECT_ID/gcpdevops"]
 # deploy 
-- name: "gcr.io/cloud-builders/docker"
+- name: "gcr.io/cloud-builders/gke-deploy"
   args:
-  - 'kubectl'
-  - 'apply'
-  - '-f'
-  - 'gke.yaml'
+  - run
+  - --filename=gke.yaml
   - --image=gcr.io/$PROJECT_ID/gcpdevops
   - --location=us-central1-c
   - --cluster=gcp-devops-project
