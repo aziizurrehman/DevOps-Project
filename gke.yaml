@@ -17,7 +17,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: gcr.io/massive-boulder-389916/gcpdevops/gcr.io/massive-boulder-389916/gcpdevops@sha256:766a766a9dd3956a315be73055becf5ce7d6f2229857a428e29b09c905545aed
+      - image: gcr.io/massive-boulder-389916/gcpdevops@sha256:766a766a9dd3956a315be73055becf5ce7d6f2229857a428e29b09c905545aed
         name: gcp-devops-project
         ports:
         - containerPort: 80
