@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: frontend
-  name: frontend
+  name: gcp-devops-project
   namespace: frontend
 spec:
   replicas: 1
@@ -17,7 +17,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: frontend
+      - image: gcp-devops-project
         name: gcr.io/gcp-repo/test-gcpdevops:latest
         ports:
         - containerPort: 80
