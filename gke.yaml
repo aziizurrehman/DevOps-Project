@@ -29,13 +29,18 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app: frontend
+    app.kubernetes.io/managed-by: gcp-cloud-build-deploy
   name: gcp-devops-project-service
+  namespace: frontend
 spec:
-  selector:
-    app.kubernetes.io/name: proxy
   ports:
-  - name: gcp-devops-project-service
+  - port: 80
     protocol: TCP
-    port: 80
     targetPort: 8080
-    type: "LoadBalancer"
+  selector:
+    app: frontend
+  type: LoadBalancer
+status:
+  loadBalancer: {}
