@@ -17,13 +17,14 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: gcr.io/gcp-repo/test-image:latest
+      - image: gcr.io/massive-boulder-389916/gcpdevops
         name: gcp-devops-project
         ports:
         - containerPort: 80
         env:
           - name: PORT
             value: "80"
+
 ---
 apiVersion: v1
 kind: Service
@@ -35,7 +36,7 @@ metadata:
   namespace: frontend
 spec:
   ports:
-  - port: 8080
+  - port: 80
     protocol: TCP
     targetPort: 8080
   selector:
